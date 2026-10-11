@@ -1,0 +1,77 @@
+# ==============================
+# Environment variables and secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Node.js / Vite / Frontend
+# ==============================
+node_modules/
+
+# Build output
+frontend/dist/
+dist/
+
+# Vite cache
+.vite/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# ==============================
+# IDE and operating system
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+logs/
+tmp/
+temp/
+
+# ==============================
+# Local databases and credentials
+# ==============================
+*.sqlite
+*.sqlite3
+*.db
+
+# ==============================
+# Supabase local temporary files
+# ==============================
+supabase/.temp/

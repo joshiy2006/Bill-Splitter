@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: #6366f1;         /* Indigo accent */
+  --color-accent-light: #818cf8;
+  --color-accent-dark: #4f46e5;
+  
+  --color-owed: #10b981;           /* Emerald Green token for "you are owed" */
+  --color-owes: #f43f5e;           /* Rose/Coral token for "you owe" */
+  
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fafc;
+  --color-surface-card: #ffffff;
+}
+
+.dark {
+  --color-accent: #818cf8;
+  --color-accent-light: #a5b4fc;
+  --color-accent-dark: #6366f1;
+
+  --color-owed: #34d399;
+  --color-owes: #fb7185;
+
+  --color-surface: #0f172a;
+  --color-surface-hover: #1e293b;
+  --color-surface-card: #1e293b;
+}
+
+/* Tabular Numerals for money amounts */
+.tabular-nums, .amount-text {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
