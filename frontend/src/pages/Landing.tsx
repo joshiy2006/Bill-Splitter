@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Zap,
   ArrowRight,
@@ -13,11 +13,11 @@ import {
   Lock,
   RefreshCw,
   Sun,
-  Moon
-} from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
-import { AmountText } from '../components/ui/AmountText';
-import { Avatar } from '../components/ui/Avatar';
+  Moon,
+} from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
+import { AmountText } from "../components/ui/AmountText";
+import { Avatar } from "../components/ui/Avatar";
 
 export const Landing: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
@@ -26,7 +26,10 @@ export const Landing: React.FC = () => {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-hidden relative selection:bg-indigo-500 selection:text-white">
       {/* Floating Background Glow Orbs */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-500/15 dark:bg-indigo-500/20 rounded-full blur-[120px] pointer-events-none animate-float-slow" />
-      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none animate-float-slow" style={{ animationDelay: '3s' }} />
+      <div
+        className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none animate-float-slow"
+        style={{ animationDelay: "3s" }}
+      />
 
       {/* Header / Navbar */}
       <nav className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between relative z-20">
@@ -45,7 +48,11 @@ export const Landing: React.FC = () => {
             className="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             title="Toggle theme"
           >
-            {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-500" />}
+            {isDarkMode ? (
+              <Sun className="w-4 h-4 text-amber-400" />
+            ) : (
+              <Moon className="w-4 h-4 text-indigo-500" />
+            )}
           </button>
 
           <Link
@@ -84,7 +91,7 @@ export const Landing: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-6xl font-extrabold font-heading text-slate-900 dark:text-slate-100 tracking-tight leading-[1.15]"
           >
-            Split bills effortlessly.{' '}
+            Split bills effortlessly.{" "}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-500 bg-clip-text text-transparent">
               Settle debts in minimum payments.
             </span>
@@ -95,10 +102,7 @@ export const Landing: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed"
-          >
-            Say goodbye to messy calculations and endless back-and-forth payments.
-            BillSplitter automatically untangles group expenses, eliminates circular debts, and creates the fewest possible transfers.
-          </motion.p>
+          ></motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -112,14 +116,6 @@ export const Landing: React.FC = () => {
             >
               <span>Start Splitting Bills</span>
               <ArrowRight className="w-5 h-5" />
-            </Link>
-
-            <Link
-              to="/login"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-base transition-all flex items-center justify-center space-x-2"
-            >
-              <Users className="w-5 h-5 text-indigo-500" />
-              <span>Try Quick Demo</span>
             </Link>
           </motion.div>
         </div>
@@ -138,7 +134,9 @@ export const Landing: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-rose-500" />
                 <div className="w-3 h-3 rounded-full bg-amber-500" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                <span className="text-xs font-bold text-slate-400 pl-2">Goa Trip & Flatmates</span>
+                <span className="text-xs font-bold text-slate-400 pl-2">
+                  Goa Trip & Flatmates
+                </span>
               </div>
               <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
                 Debts Simplified
@@ -150,7 +148,9 @@ export const Landing: React.FC = () => {
               <div className="bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 rounded-2xl p-4 space-y-3">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-400 uppercase">
                   <span>Smart Settlement Plan</span>
-                  <span className="text-indigo-600 dark:text-indigo-400">3 Transfers Needed</span>
+                  <span className="text-indigo-600 dark:text-indigo-400">
+                    3 Transfers Needed
+                  </span>
                 </div>
 
                 <div className="space-y-2">
@@ -159,7 +159,12 @@ export const Landing: React.FC = () => {
                       <Avatar name="Karan Patel" size="sm" />
                       <span className="font-semibold">Karan → Asha</span>
                     </div>
-                    <AmountText amountPaise={250000} currency="INR" size="sm" type="neutral" />
+                    <AmountText
+                      amountPaise={250000}
+                      currency="INR"
+                      size="sm"
+                      type="neutral"
+                    />
                   </div>
 
                   <div className="flex items-center justify-between p-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 text-xs">
@@ -167,7 +172,12 @@ export const Landing: React.FC = () => {
                       <Avatar name="Sneha Gupta" size="sm" />
                       <span className="font-semibold">Sneha → Ravi</span>
                     </div>
-                    <AmountText amountPaise={180000} currency="INR" size="sm" type="neutral" />
+                    <AmountText
+                      amountPaise={180000}
+                      currency="INR"
+                      size="sm"
+                      type="neutral"
+                    />
                   </div>
                 </div>
               </div>
@@ -182,7 +192,8 @@ export const Landing: React.FC = () => {
                     Eliminates Circular Debts Automatically
                   </p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Instead of 12 pairwise IOUs between 6 friends, BillSplitter condenses the entire group into just 3 clean payments.
+                    Instead of 12 pairwise IOUs between 6 friends, BillSplitter
+                    condenses the entire group into just 3 clean payments.
                   </p>
                 </div>
 
@@ -216,7 +227,9 @@ export const Landing: React.FC = () => {
               4 Split Modes with Exact Paise Precision
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Split bills equally, by exact amounts, percentages, or shares. Largest-remainder rounding guarantees every single paisa adds up perfectly.
+              Split bills equally, by exact amounts, percentages, or shares.
+              Largest-remainder rounding guarantees every single paisa adds up
+              perfectly.
             </p>
           </div>
 
@@ -228,7 +241,8 @@ export const Landing: React.FC = () => {
               Automatic Debt Network Simplification
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Circular debts like A paying B, B paying C, and C paying A are instantly detected and cancelled out behind the scenes.
+              Circular debts like A paying B, B paying C, and C paying A are
+              instantly detected and cancelled out behind the scenes.
             </p>
           </div>
 
@@ -240,7 +254,8 @@ export const Landing: React.FC = () => {
               Prioritized Payment Queue
             </h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Never miss a settlement. Pending payments are automatically queued by urgency and due date so everyone knows who pays next.
+              Never miss a settlement. Pending payments are automatically queued
+              by urgency and due date so everyone knows who pays next.
             </p>
           </div>
         </div>
@@ -248,19 +263,17 @@ export const Landing: React.FC = () => {
 
       {/* CTA Footer */}
       <footer className="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
-        <div className="flex items-center space-x-2">
-          <div className="w-6 h-6 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
-            <Zap className="w-3.5 h-3.5 fill-current" />
-          </div>
-          <span className="font-bold text-slate-800 dark:text-slate-200">BillSplitter</span>
-          <span>© 2026. All rights reserved.</span>
-        </div>
-
         <div className="flex items-center space-x-6">
-          <Link to="/login" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <Link
+            to="/login"
+            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
             Sign In
           </Link>
-          <Link to="/login" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <Link
+            to="/login"
+            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
             Sign Up
           </Link>
         </div>
